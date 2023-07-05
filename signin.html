@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign-in</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+*{
+    font-family: 'poppins' ,sans-serif;
+}
+body{
+    background:linear-gradient(135deg,#fe5b3d, #ffac38);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    
+}
+span{
+    color: #444;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 5px 0;
+}
+header{
+    color: #444;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+
+.input-field .input{
+    height: 45px;
+    width: 87%;
+    border: none;
+    border-radius: 30px;
+    color: black;
+    font-size: 15px;
+    padding: 0 0 0 45px;
+    background: rgb(249, 243, 243);
+    outline: none;
+}
+i{
+    position: relative;
+    top: -33px;
+    left: 17px;
+    color: #444;
+}
+::-webkit-input-placeholder{
+    color: #444;
+}
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    color: white;
+    background: #474fa0;
+    cursor: pointer;
+    transition: .3s ;
+}
+.submit:hover{
+    background: #fe5b3d;
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+.two-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #444;
+    font-size: small;
+    margin-top: 10px;
+}
+.one{
+    display: flex;
+}
+label a{
+    text-decoration: none;
+    color: #444;
+}
+.signup{
+    display: flex;
+    flex-direction: row;
+    justify-content: none;
+    text-align: center;
+    color: #444;
+    font-size: small;
+    margin-top: 10px;
+    text-decoration: none;
+    
+}
+.signup a{
+  font-size: medium;
+  text-align: center;
+}
+.lbl  {color: #444;
+    font-size: 15px;
+    display: flex;
+    justify-content: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="container">
+        <div class="top">
+            <span>Have an account?</span>
+            <header><h2>Login</h2></header>
+        
+    </div>
+    <form action="index.html" onsubmit="return fn()">
+        <div class="input-field">
+            <label class="lbl">UserName</label>
+            <span class="text-danger" id="uname"></span>
+            <input type="text" class="input" placeholder="" id="valid5"  required>
+            <i class='bx bx-user' ></i>
+        </div>
+        <br>
+        <div class="input-field">
+            <label class="lbl">Password</label>
+            <span class="text-danger" id="upass"></span>
+            <input type="text" class="input" placeholder="" id="valid6"  required>
+            <i class='bx bx-user' ></i>
+        </div>
+        <br>
+        <div class="input-field">
+        <a href="index.html"><button class="submit">Login</button></a>
+        
+        </div>
+        
+        <div class="two-col">
+            <div class="one">
+               <input type="checkbox" name="" id="check">
+               <label for="check"> Remember Me</label>
+            </div>
+            <div class="two">
+                <label><a href="#">Forgot password?</a></label>
+            </div>
+        </div>
+        <div class="signup">
+          Don't have an account?<a href="signup.html"> Sign-Up</a>
+          </div>
+        </form>
+    </div>
+</div> 
+<script src="signup.js"></script> 
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RENT</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+*{
+    font-family: 'poppins' ,sans-serif;
+}
+body{
+    background:linear-gradient(135deg,#fe5b3d, #ffac38);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    
+}
+header{
+    color: #444;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+.input-field .input{
+    height: 45px;
+    width: 87%;
+    border: none;
+    border-radius: 30px;
+    color: black;
+    font-size: 15px;
+    padding: 0 0 0 45px;
+    background: rgb(249, 243, 243);
+    outline: none;
+}
+
+::-webkit-input-placeholder{
+    color: #444;
+}
+.lbl {
+    color: #444;
+    font-size: 15px;
+    display: flex;
+    justify-content: left;
+    }
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    color: white;
+    background: #474fa0;
+    cursor: pointer;
+    transition: .3s ;
+}
+.submit:hover{
+    background: #fe5b3d;
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="container">
+        <div class="top">
+            <header><h3>WELCOME</h3></header>
+        </div>
+        <form action="index.html" onsubmit="return fn()">
+        <div class="input-field">
+            <label class="lbl">FULL-NAME</label>
+            <span class="text-danger" id="name"></span>
+            <input type="text" class="input" id="valid1"  required>
+            
+        </div>
+        <br>
+        <div class="input-field">
+            <label class="lbl">EMAIL</label>
+          <span class="text-danger" id="email"></span>
+          <input type="email" class="input" id="valid2"  required>
+          
+      </div>
+      <br>
+        <div class="input-field">
+            <label class="lbl">MOBILE</label>
+            <span class="text-danger" id="mobile"></span>
+            <input type="Password" class="input"  id="valid3"  required>
+        </div>
+        
+        <br>
+        <div class="input-field">
+          <label class="lbl">LOCATION</label>
+          <span class="text-danger"></span>
+          <input type="search" class="input" id=""  required>
+        </div>
+        <br>
+        <div class="input-field">
+            <label class="lbl">CAR NUMBER</label>
+            <span class="text-danger" id="number"></span>
+            <input type="number" class="input"  id="valid4"  required>
+        </div>
+        <br>
+        <div class="input-field">
+          <label class="lbl">PICK-UP DATE</label>
+          <span class="text-danger"></span>
+          <input type="date" class="input" id=""  required>
+        </div>
+        <br>
+        <div class="input-field">
+          <label class="lbl">RETURN DATE</label>
+          <span class="text-danger"></span>
+          <input type="date" class="input" id=""  required>
+        </div>
+      <br>
+        <div class="input-field">
+            <a href="index.html"><button class="submit">DONE</button></a>
+        </div>
+    </form>
+    </div>
+</div>  
+  <script>
+    function fn(){
+    var valid=true;
+    var name=document.getElementById('valid1').value;
+    var email=document.getElementById('valid2').value;
+    var mobile=document.getElementById('valid3').value;
+    var number=document.getElementById('valid4').value;
+    
+    if(name==''){
+      valid=false;
+      var com=document.getElementById('name')
+      com.innerHTML="* please enter your name"
+    }
+    else if(name.length<=5){
+      valid=false;
+      var com=document.getElementById('name')
+      com.innerHTML="* Name must contain atlist 6 character"
+    }
+    else{
+      document.getElementById('name').innerHTML='';
+    }
+
+
+    if(email==''){
+      valid=false;
+      var com=document.getElementById('email')
+      com.innerHTML="* please enter your valid email"
+    }
+    else{
+      document.getElementById('email').innerHTML='';
+    }
+
+    if(mobile==''){
+      valid=false;
+      var com=document.getElementById('mobile')
+      com.innerHTML="* please enter mobile number"
+    }
+    else if(mobile.length<11 || mobile.length>11 ){
+      valid=false;
+      var com=document.getElementById('mobile')
+      com.innerHTML="* Please enter 11 digit number"
+    }
+    else{
+      document.getElementById('mobile').innerHTML='';
+    }
+    if(number==''){
+      valid=false;
+      var com=document.getElementById('number')
+      com.innerHTML="* please enter car number"
+    }
+    else{
+      document.getElementById('number').innerHTML='';
+    }
+
+return valid;
+
+}
+
+  </script>
+</body>
+</html>

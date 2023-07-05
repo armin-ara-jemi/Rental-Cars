@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+*{
+    font-family: 'poppins' ,sans-serif;
+}
+body{
+    background:linear-gradient(135deg,#fe5b3d, #ffac38);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    
+}
+header{
+    color: #444;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+.input-field .input{
+    height: 45px;
+    width: 87%;
+    border: none;
+    border-radius: 30px;
+    color: black;
+    font-size: 15px;
+    padding: 0 0 0 45px;
+    background: rgb(249, 243, 243);
+    outline: none;
+}
+
+::-webkit-input-placeholder{
+    color: #444;
+}
+.lbl  {color: #444;
+    font-size: 15px;
+    display: flex;
+    justify-content: left;
+    }
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    color: white;
+    background: #474fa0;
+    cursor: pointer;
+    transition: .3s ;
+}
+.submit:hover{
+    background: #fe5b3d;
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="container">
+        <div class="top">
+            <header><h2>Registration</h2></header>
+        </div>
+        <form action="signin.html" onsubmit="return fn()">
+        <div class="input-field">
+            <label class="lbl">FULL-NAME</label>
+            <span class="text-danger" id="name"></span>
+            <input type="text" class="input" placeholder="" id="valid1"  required>
+            
+        </div>
+        <br>
+        <div class="input-field">
+            <label class="lbl">EMAIL</label>
+          <span class="text-danger" id="email"></span>
+          <input type="email" class="input" placeholder="" id="valid2"  required>
+          
+      </div>
+      <br>
+        <div class="input-field">
+            <label class="lbl">PASSWORD</label>
+            <span class="text-danger" id="pass1"></span>
+            <input type="Password" class="input" placeholder="" id="valid3"  required>
+            
+        </div>
+        <br>
+        <div class="input-field">
+            <label class="lbl">CONFIRM-PASSWORD</label>
+          <span class="text-danger" id="pass2"></span>
+          <input type="Password" class="input" placeholder="" id="valid4"  required>
+          
+      </div>
+      <br>
+        <div class="input-field">
+            <a href="signin.html"><button class="submit">SignUp</button></a>
+        </div>
+    </form>
+    </div>
+</div>  
+  <script src="signup.js"></script>
+</body>
+</html>
